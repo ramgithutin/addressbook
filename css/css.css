@@ -1,7 +1,122 @@
 *{
     margin: 0px;
     padding: 0px;
+    font-family: sans-serif;
+}
+.background{
+    background-color: #337ab7;
+}
+.whiteBackground{
+    background-color: #ffffff;
+}
+.dflex{
+    display: flex;
+}
+.alignCenter{
+    align-items: center;
+}
+.justfyCenter{
+    justify-content: center;
+}
+.justfyBetween{
+    justify-content: space-between;
+}
+.imageIcon{
+    width: 20px;
+    padding: 0px 5px;
 }
 .header{
-    background-color: #337ab7;
+    padding: 10px 20px 10px 10px;
+}
+.margin10{
+    margin: 0px 10px;
+}
+.margin1010{
+    margin: 10px 10px;
+}
+/* font size */
+.small{
+    font-size: 12px;
+    font-weight: 400px;
+    line-height: 18px;
+}
+.medium{
+    font-size: 16px;
+    font-weight: 400px;
+    line-height: 18px;
+}
+.large{
+    font-size: 20px;
+    font-weight: 400px;
+    line-height: 18px;
+}
+.extraLarge{
+    font-size: 25px;
+    font-weight: 400px;
+    line-height: 18px;
+}
+/* color */
+.blue{
+    color: #337ab7;
+}
+.white{
+    color: #ffffff;
+}
+.middle{
+    background-color: #d8e5f1;
+    padding: 100px;
+}
+.bookImg{
+    width: 100px;
+}
+.middleLeft{
+    padding:100px;
+}
+.border{
+    border-radius: 10px 0px 0px 10px;
+    border: 1px solid #337ab7;
+}
+.textInput{
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #d8d8d8;
+    padding: 12px;
+    margin: 14px;
+}
+.login{
+    background-color: #ffffff;
+    border: 1px solid #337ab7;
+    width: 150px;
+    padding: 10px;
+    border-radius: 24px;
+    color: #337ab7;
+}
+.whiteBorder{
+    border-radius: 0px 10px 10px 0px;
+    border: 1px solid #ffffff;
+    width: 300px;
+}
+.googleImg{
+    width: 52px;
+    padding: 7px;
+}
+.facebookImg{
+    width: 45px;
+    padding: 7px;
+}
+a{
+    text-decoration: none;
+    color:#337ab7;
+}
+.padding10{
+    padding: 10px;
+}
+#nameError,
+#emailError,
+#userError,
+#passwordError,
+#confirmError{
+    color: red;
+    margin: 0px 0px 0px 18px;
+    display: none;
 }
