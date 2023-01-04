@@ -36,6 +36,7 @@ function nameValidate(fullName){
 }
 function mailValidate(email){
     if(email.value==""){
+        email.classList.add("error");
         error('emailError');
         return false;
     }else{
@@ -54,28 +55,29 @@ function userNameValidate(userName){
 }
 function passwordValidate(signPassword){
     if(signPassword.value == "" || signPassword.length<=4){
+        signPassword.classList.add("error");
         error('passwordError');
         return false;
     }else{
         success('passwordError');
+        signPassword.classList.remove("error");
         return true;
     }
 }
-function passwordComfirmValidate(confirmPassword,signPassword){
-    if(confirmPassword.length>1){
-        if(confirmPassword.value == signPassword.value){
-            success('confirmError');
-            return true;
-        }
-        else{
-            error('confirmError');
-            return false;
-        }
+function passwordComfirmValidate(confirmPassword){
+    if(confirmPassword.value ==""){
+        error('confirmError');
+        return false;
+    }else if(confirmPassword.value==signPassword.value){
+        success('confirmError');
+        return true;
     }else{
         error('confirmError');
         return false;
     }
 }
+
+
 
 
 

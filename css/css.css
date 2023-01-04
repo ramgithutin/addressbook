@@ -18,6 +18,9 @@
 .justfyCenter{
     justify-content: center;
 }
+.justifyFlexEnd{
+    justify-content: flex-end;
+}
 .justfyBetween{
     justify-content: space-between;
 }
@@ -37,23 +40,26 @@
 /* font size */
 .small{
     font-size: 12px;
-    font-weight: 400px;
+    font-weight: 400;
     line-height: 18px;
 }
 .medium{
     font-size: 16px;
-    font-weight: 400px;
+    font-weight: 400;
     line-height: 18px;
 }
 .large{
     font-size: 20px;
-    font-weight: 400px;
+    font-weight: 400;
     line-height: 18px;
 }
 .extraLarge{
     font-size: 25px;
-    font-weight: 400px;
+    font-weight: 400;
     line-height: 18px;
+}
+.weight700{
+    font-weight: 700;
 }
 /* color */
 .blue{
@@ -61,6 +67,9 @@
 }
 .white{
     color: #ffffff;
+}
+.lightblue{
+    background-color: #d8e5f1;
 }
 .middle{
     background-color: #d8e5f1;
@@ -111,6 +120,11 @@ a{
 .padding10{
     padding: 10px;
 }
+.curveBoder{
+    border-radius: 10px;
+    border: none;
+    padding: 3px;
+}
 #nameError,
 #emailError,
 #userError,
@@ -119,4 +133,29 @@ a{
     color: red;
     margin: 0px 0px 0px 18px;
     display: none;
+}
+.userError{
+    color: red;
+    margin: 0px 0px 0px 18px;
+}
+.error{
+    border-bottom: 1px solid red;
+
+}
+.imgIcon{
+    width: 30px;
+    padding: 7px;
+}
+.padding75{
+    padding: 75px;
+}
+.width600{
+    width: 600px;
+}
+.blueBottomBorder{
+    border-bottom: 2px solid #337ab7;
+}
+.login:hover{
+    background-color: #337ab7;
+    color: #ffffff;
 }

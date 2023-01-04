@@ -31,6 +31,9 @@
                             <input type="submit" name="login" value="LOGIN" class="login">
                         </div>
                     </form>
+                    <cfif structKeyExists(form,'login')>
+                        <cfinvoke method="loginform" component="components/component">
+                    </cfif>
                     <div class="dflex alignCenter justfyCenter small margin1010">Or Sign In Using</div>
                     <div class="dflex alignCenter justfyCenter margin1010">
                         <img src="assets/facebook.png" alt="book" class="facebookImg">
