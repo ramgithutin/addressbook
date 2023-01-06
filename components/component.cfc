@@ -14,7 +14,7 @@
             </cfquery>
         </cfif>
     </cffunction>    
-    <cffunction name="loginform">
+    <cffunction name="loginform" access="public">
         <cfargument name="Username" default="#form.loginUserId#">
         <cfargument name="loginPassword" default="#form.loginPassword#">
         <cfquery name="userInfo">
@@ -28,7 +28,31 @@
             <cfset Session.userFlag = 1>
             <cflocation url="mainpage.cfm" addtoken="No">
         <cfelse>
-            <cflocation url="..\login.cfm" addtoken="No">
+            <cflocation url="login.cfm" addtoken="No">
         </cfif>
     </cffunction>
+    <cffunction name="databaseInsert">
+        <cfargument name="optionId" default="#form.optionId#">
+        <cfargument name="fName" default="#form.fName#">
+        <cfargument name="lName" default="#form.lName#">
+        <cfargument name="gender" default="#form.gender#">
+        <cfargument name="Dob" default="#form.Dob#">
+        <cfargument name="address" default="#form.address#">
+        <cfargument name="street" default="#form.street#">
+        <cfargument name="email" default="#form.email#">
+        <cfargument name="phone" default="#form.phone#">
+        <cfquery name="create">
+        INSERT INTO register 
+        VALUES(<cfqueryparam value="#argumentS.optionId#" cfsqltype="cf_sql_varchar">,
+            <cfqueryparam value="#argumentS.fName#" cfsqltype="cf_sql_varchar">,
+            <cfqueryparam value="#argumentS.lName#" cfsqltype="cf_sql_varchar">,
+            <cfqueryparam value="#argumentS.gender#" cfsqltype="cf_sql_varchar">,
+            <cfqueryparam value="#argumentS.Dob#" cfsqltype="cf_sql_varchar">,
+            <cfqueryparam value="#argumentS.address#" cfsqltype="cf_sql_varchar">,
+            <cfqueryparam value="#argumentS.street#" cfsqltype="cf_sql_varchar">,
+            <cfqueryparam value="#argumentS.email#" cfsqltype="cf_sql_varchar">,
+            <cfqueryparam value="#argumentS.phone#" cfsqltype="cf_sql_varchar">);
+        </cfquery>
+        <cflocation url="mainpage.cfm">
+    </cffunction> 
 </cfcomponent>

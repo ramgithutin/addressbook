@@ -32,23 +32,79 @@
                                 <div class="extraLarge blue padding10">CREATE CONTACT</div>
                             </div>
                             <div class="padding10 blue blueBottomBorder">Personal Contact</div>
-                            <form method="post" name="createFrom">
-                                <div class="dflex">
+                            <form method="post" name="createFrom" onsubmit="return vadidateCreate()">
+                                <div class="dflex justfyBetween">
                                     <div>
                                         <div class="blue padding10">Title</div>
-                                            <select name="option" id="option">
-                                                <option selected="" value="Default"></option>
+                                            <select name="optionId" id="optionId" class="borderNone">
+                                                <option selected="" ></option>
                                                 <option value="Mr">Mr</option>
                                                 <option value="Mrs">Mrs</option>
                                                 <option value="Ms">Ms</option>
                                             </select>
                                         </div>
                                     <div>
-                                    <div class="blue padding10">First Name*</div>
+                                        <div class="blue padding10">First Name*</div>   
+                                        <input type="text" name="fName" id="fName" placeholder="Your First Name" class="createText borderNone">
+                                    </div>
+                                    <div>
+                                        <div class="blue padding10">Last Name*</div>   
+                                        <input type="text" name="lName" id="lName" placeholder="Your Last Name" class="createText borderNone">
+                                    </div>
                                 </div>
+                                <div class="dflex justfyBetween">
+                                    <div>
+                                        <div class="blue padding10">Gender*</div>
+                                        <select name="gender" id="gender" class="borderNone createText2">
+                                            <option selected=""></option>
+                                            <option value="Male">Male</option>
+                                            <option value="Female">Female</option>
+                                        </select>
+                                    </div>
+                                    <div>
+                                        <div class="blue padding10">Date Of Birth*</div>   
+                                        <input type="date" name="Dob" id="Dob" class="createText2 borderNone">
+                                    </div>
+                                </div>
+                                <div class="dflex justfyBetween">
+                                    <div>
+                                        <div class="blue padding10">Upload Photo*</div>
+                                        <input type="file" name="fileUpload" id="fileUpload" class="createText2">
+                                    </div>
+                                </div>
+                                <div class="padding10 blue blueBottomBorder">Contact Details</div>
+                                <div class="dflex justfyBetween">
+                                    <div>
+                                        <div class="blue padding10">Address*</div>
+                                        <input type="text" name="address" id="address" placeholder="Your Address" class="createText2 borderNone">
+                                    </div>
+                                    <div>
+                                        <div class="blue padding10">Street*</div>   
+                                        <input type="text" name="street" id="street" placeholder="Your Street Name" class="createText2 borderNone">
+                                    </div>
+                                </div>
+                                <div class="dflex justfyBetween">
+                                    <div>
+                                        <div class="blue padding10">Email Id*</div>
+                                        <input type="text" name="email" id="email" placeholder="Your Email Address" class="createText2 borderNone">
+                                    </div>
+                                    <div>
+                                        <div class="blue padding10">Phone No*</div>   
+                                        <input type="text" name="phone" id="phone" placeholder="Your Phone No" class="createText2 borderNone">
+                                    </div>
+                                </div>
+                                <div class="dflex justfyCenter">
+                                    <input type="submit" name="createFormSubmit" id="createFormSubmit" class="login" value="Create">
+                                </div>
+                            </form>
+                            <cfif structKeyExists(form,'createFormSubmit')>
+                                <cfinvoke method="databaseInsert" component="components/component">
+                                <cfset structClear(form)>
+                            </cfif>
                         </div>
                       </div>
                     </div>
-                  </div>
+                </div>
             </div>
+            <script  src="js/jquery.js"></script>
         </cfoutput>
