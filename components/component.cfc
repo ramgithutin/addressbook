@@ -1,3 +1,4 @@
+
 <cfcomponent>
     <cffunction name="registerform">
         <cfargument name="fullName" default="#form.fullName#">
@@ -13,7 +14,7 @@
                 <cfqueryparam value="#argumentS.password#" cfsqltype="cf_sql_varchar">)
             </cfquery>
         </cfif>
-    </cffunction>    
+    </cffunction>
     <cffunction name="loginform" access="public">
         <cfargument name="Username" default="#form.loginUserId#">
         <cfargument name="loginPassword" default="#form.loginPassword#">
@@ -41,18 +42,33 @@
         <cfargument name="street" default="#form.street#">
         <cfargument name="email" default="#form.email#">
         <cfargument name="phone" default="#form.phone#">
-        <cfquery name="create">
-        INSERT INTO register 
-        VALUES(<cfqueryparam value="#argumentS.optionId#" cfsqltype="cf_sql_varchar">,
-            <cfqueryparam value="#argumentS.fName#" cfsqltype="cf_sql_varchar">,
-            <cfqueryparam value="#argumentS.lName#" cfsqltype="cf_sql_varchar">,
-            <cfqueryparam value="#argumentS.gender#" cfsqltype="cf_sql_varchar">,
-            <cfqueryparam value="#argumentS.Dob#" cfsqltype="cf_sql_varchar">,
-            <cfqueryparam value="#argumentS.address#" cfsqltype="cf_sql_varchar">,
-            <cfqueryparam value="#argumentS.street#" cfsqltype="cf_sql_varchar">,
-            <cfqueryparam value="#argumentS.email#" cfsqltype="cf_sql_varchar">,
-            <cfqueryparam value="#argumentS.phone#" cfsqltype="cf_sql_varchar">);
+        <cfquery name="check">
+            SELECT email
+            FROM register
+            WHERE email = <cfqueryparam value="#arguments.email#" cfsqltype="cf_sql_varchar">
         </cfquery>
+        <cfif check.recordCount eq 0>
+            <cfquery name="create">
+                INSERT INTO register 
+                VALUES(<cfqueryparam value="#argumentS.optionId#" cfsqltype="cf_sql_varchar">,
+                    <cfqueryparam value="#argumentS.fName#" cfsqltype="cf_sql_varchar">,
+                    <cfqueryparam value="#argumentS.lName#" cfsqltype="cf_sql_varchar">,
+                    <cfqueryparam value="#argumentS.gender#" cfsqltype="cf_sql_varchar">,
+                    <cfqueryparam value="#argumentS.Dob#" cfsqltype="cf_sql_varchar">,
+                    <cfqueryparam value="#argumentS.address#" cfsqltype="cf_sql_varchar">,
+                    <cfqueryparam value="#argumentS.street#" cfsqltype="cf_sql_varchar">,
+                    <cfqueryparam value="#argumentS.email#" cfsqltype="cf_sql_varchar">,
+                    <cfqueryparam value="#argumentS.phone#" cfsqltype="cf_sql_varchar">);
+            </cfquery>
+        </cfif>
         <cflocation url="mainpage.cfm">
     </cffunction> 
+
+    <cffunction  name="viewTabel" returnType="query">
+        <cfquery name="display">
+            SELECT First_Name,Last_Name,email,phone_no,Gender
+            FROM register;
+        </cfquery>
+        <cfreturn display>
+    </cffunction>
 </cfcomponent>

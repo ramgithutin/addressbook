@@ -52,7 +52,6 @@
                     <cfif structKeyExists(form,'register')>
                         <cfinvoke method="registerform" component="components/component">
                     </cfif>
-                    <cfset structClear(form)>
                 </div>
             </div>
         </div>

@@ -38,6 +38,11 @@
     margin: 10px 10px;
 }
 /* font size */
+.xsmall{
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 18px;
+}
 .small{
     font-size: 12px;
     font-weight: 400;
@@ -84,6 +89,9 @@
 .border{
     border-radius: 10px 0px 0px 10px;
     border: 1px solid #337ab7;
+}
+.height{
+    height: 200px;
 }
 .textInput{
     outline: none;
@@ -145,6 +153,10 @@ a{
 .padding75{
     padding: 75px;
 }
+
+.width245{
+    width: 245px;
+}
 .width600{
     width: 600px;
 }
@@ -161,7 +173,7 @@ a{
 }
 .borderNone{
     border:  1px solid #d8d8d8;
-    border-style:solid none;
+    border-style:none none solid none;
 }
 .createText2{
     width: 200px;
@@ -170,4 +182,8 @@ a{
 .error{
     border: 1px solid red;
     border-style: solid none;
+}
+.column{
+    padding: 10px;
+    column-width: 144px;
 }
