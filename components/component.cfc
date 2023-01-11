@@ -13,6 +13,7 @@
                 <cfqueryparam value="#argumentS.userName#" cfsqltype="cf_sql_varchar">,
                 <cfqueryparam value="#argumentS.password#" cfsqltype="cf_sql_varchar">)
             </cfquery>
+            <cflocation url="login.cfm">
         </cfif>
     </cffunction>
     <cffunction name="loginform" access="public">

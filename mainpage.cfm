@@ -4,6 +4,7 @@
         <link rel="stylesheet" href="assets/modal.css">
         <title>Address Book</title>
         <link rel="shortcut icon" href="assets/ABicon.png">
+        <script  src="assets/jquery.js"></script>
     </head>
     <body>
         <cfoutput>
@@ -114,6 +115,7 @@
                     <cfinclude  template="view.cfm">
                 </div>
             </div> 
+            <script  src="js/jquery.js"></script>
             <script  src="js/registerValidate.js"></script>
         </cfoutput>
     </body>

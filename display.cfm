@@ -27,8 +27,10 @@
                         <td class="column blue borderNone">
                             <a href="components/delete.cfc?method=deletepage&name=#data.First_Name#"><button class="login">DELETE<button></a>
                         </td>
+                        <cfset local.id=#data.First_Name#>
+                        <cfdump var = "#local.id#">
                         <td class="column blue borderNone">
-                            <button class="login" onclick="document.getElementById('id02').style.display='block'">VIEW<button>
+                            <button class="login" onclick="document.getElementById('id02').style.display='block';postvalue('#local.id#')">VIEW<button>
                         </td>
                     </tr>
                 </cfloop>
