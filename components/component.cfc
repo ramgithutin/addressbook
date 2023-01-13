@@ -50,7 +50,7 @@
         </cfquery>
         <cfif check.recordCount eq 0>
             <cfquery name="create">
-                INSERT INTO register 
+                INSERT INTO register (Title,First_Name,Last_Name,Gender,DOB,address,Street,email,phone_no)
                 VALUES(<cfqueryparam value="#argumentS.optionId#" cfsqltype="cf_sql_varchar">,
                     <cfqueryparam value="#argumentS.fName#" cfsqltype="cf_sql_varchar">,
                     <cfqueryparam value="#argumentS.lName#" cfsqltype="cf_sql_varchar">,
@@ -67,7 +67,7 @@
 
     <cffunction  name="viewTabel" returnType="query">
         <cfquery name="display">
-            SELECT First_Name,Last_Name,email,phone_no,Gender
+            SELECT ID,First_Name,Last_Name,email,phone_no,Gender
             FROM register;
         </cfquery>
         <cfreturn display>

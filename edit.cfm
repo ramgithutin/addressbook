@@ -7,12 +7,18 @@
     </head>
     <body>
         <cfoutput>
-            <form method="post" name="createFrom" onsubmit="return vadidateCreate()">
+        <div class="dflex justfyCenter">
+        <div class="whiteBackground padding10 width600">
+            <div class="lightblue dflex justfyCenter">
+                <div class="extraLarge blue padding10 ">EDIT CONTACT</div>
+            </div>
+            <div class="padding10 blue blueBottomBorder">Personal Contact</div>
+            <form method="post" name="createFrom" onsubmit="return vadidateedit()">
                 <div class="dflex justfyBetween">
                     <div>
                         <div class="blue padding10">Title</div>
-                            <select name="option" id="optionId" class="borderNone">
-                                <option selected="" value="Default"></option>
+                            <select name="editOptionId" id="editOptionId" class="borderNone">
+                                <option selected=""></option>
                                 <option value="Mr">Mr</option>
                                 <option value="Mrs">Mrs</option>
                                 <option value="Ms">Ms</option>
@@ -20,17 +26,17 @@
                         </div>
                     <div>
                         <div class="blue padding10">First Name*</div>   
-                        <input type="text" name="fName" id="fName" placeholder="Your First Name" class="createText borderNone">
+                        <input type="text" name="editFName" id="editFName" placeholder="Your First Name" class="createText borderNone">
                     </div>
                     <div>
                         <div class="blue padding10">Last Name*</div>   
-                        <input type="text" name="lName" id="lName" placeholder="Your Last Name" class=" error createText borderNone">
+                        <input type="text" name="editLName" id="editLName" placeholder="Your Last Name" class="createText borderNone">
                     </div>
                 </div>
                 <div class="dflex justfyBetween">
                     <div>
                         <div class="blue padding10">Gender*</div>
-                        <select name="option" id="option" class="borderNone createText2">
+                        <select name="editGender" id="editGender" class="borderNone createText2">
                             <option selected="" value="Default"></option>
                             <option value="Male">Male</option>
                             <option value="Female">Female</option>
@@ -38,42 +44,43 @@
                     </div>
                     <div>
                         <div class="blue padding10">Date Of Birth*</div>   
-                        <input type="date" name="date" id="date" class="createText2 borderNone">
+                        <input type="date" name="editDate" id="editDate" class="createText2 borderNone">
                     </div>
                 </div>
                 <div class="dflex justfyBetween">
                     <div>
                         <div class="blue padding10">Upload Photo*</div>
-                        <input type="file" name="file" id="file" class="createText2">
+                        <input type="file" name="editFile" id="editFile" class="createText2">
                     </div>
                 </div>
                 <div class="padding10 blue blueBottomBorder">Contact Details</div>
                 <div class="dflex justfyBetween">
                     <div>
                         <div class="blue padding10">Address*</div>
-                        <input type="text" name="address" id="address" placeholder="Your Address" class="createText2 borderNone">
+                        <input type="text" name="editAddress" id="editAddress" placeholder="Your Address" class="createText2 borderNone">
                     </div>
                     <div>
                         <div class="blue padding10">Street*</div>   
-                        <input type="text" name="street" id="street" placeholder="Your Street Name" class="createText2 borderNone">
+                        <input type="text" name="editStreet" id="editStreet" placeholder="Your Street Name" class="createText2 borderNone">
                     </div>
                 </div>
                 <div class="dflex justfyBetween">
                     <div>
                         <div class="blue padding10">Email Id*</div>
-                        <input type="text" name="email" id="address" placeholder="Your Email Address" class="createText2 borderNone">
+                        <input type="text" name="editemail" id="editemail" placeholder="Your Email Address" class="createText2 borderNone">
                     </div>
                     <div>
                         <div class="blue padding10">Phone No*</div>   
-                        <input type="text" name="street" id="street" placeholder="Your Phone No" class="createText2 borderNone">
+                        <input type="text" name="editPhone" id="editPhone" placeholder="Your Phone No" class="createText2 borderNone">
                     </div>
                 </div>
                 <div class="dflex justfyCenter">
-                    <input type="submit" name="createFormSubmit" id="createFormSubmit" class="login" value="Create">
+                    <input type="submit" name="editFormSubmit" id="editFormSubmit" class="login" value="EDIT">
                 </div>
             </form>
         </div>
       </div>
     </div>
-<script  src="js/jquery.js"></script>
+    </div>
+<script  src="js/edit.js"></script>
 </cfoutput>

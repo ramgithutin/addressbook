@@ -27,7 +27,7 @@
                         <cfinclude  template="display.cfm">
                     </div>
                 </div>  
-                <div id="id01" class="w3-modal">
+                <div id="id01" class="w3-modal padding10">
                     <div class="w3-modal-content middle padding10">
                         <div class="w3-container dflex">
                             <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright">&times;</span>
@@ -114,8 +114,12 @@
                 <div id="id02" class="w3-modal ">
                     <cfinclude  template="view.cfm">
                 </div>
+                <div id="id03" class="w3-modal ">
+                    <cfinclude  template="edit.cfm">
+                </div>
             </div> 
             <script  src="js/jquery.js"></script>
+            <script  src="js/getValue.js"></script>
             <script  src="js/registerValidate.js"></script>
         </cfoutput>
     </body>

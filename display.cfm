@@ -22,13 +22,12 @@
                         <td class="column blue borderNone">#data.email#</td>
                         <td class="column blue borderNone">#data.phone_no#</td>
                         <td class="column blue borderNone">
-                            <button class="login">EDIT<button>
+                        <cfset local.id=#data.ID#>
+                             <button class="login" onclick="document.getElementById('id03').style.display='block';getvalue('#local.id#')">EDIT<button>
                         </td>
                         <td class="column blue borderNone">
-                            <a href="components/delete.cfc?method=deletepage&name=#data.First_Name#"><button class="login">DELETE<button></a>
+                            <a href="components/delete.cfc?method=deletepage&name=#data.ID#"><button class="login">DELETE<button></a>
                         </td>
-                        <cfset local.id=#data.First_Name#>
-                        <cfdump var = "#local.id#">
                         <td class="column blue borderNone">
                             <button class="login" onclick="document.getElementById('id02').style.display='block';postvalue('#local.id#')">VIEW<button>
                         </td>

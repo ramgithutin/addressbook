@@ -15,37 +15,32 @@
                     <tr>
                         <td class="column blue">Name</td>
                         <td class="column blue">:</td>
-                        <td class="column blue" id="hello"></td>
+                        <td class="column blue" id="nameview"></td>
                     </tr>
                     <tr>
                         <td class="column blue">Gender</td>
                         <td class="column blue">:</td>
-                        <td class="column blue"></td>
+                        <td class="column blue" id="genderView"></td>
                     </tr>
                     <tr>
                         <td class="column blue">Date Of Brith</td>
                         <td class="column blue">:</td>
-                        <td class="column blue"></td>
+                        <td class="column blue" id="dobView"></td>
                     </tr>
                     <tr>
                         <td class="column blue">Address</td>
                         <td class="column blue">:</td>
-                        <td class="column blue"></td>
-                    </tr>
-                    <tr>
-                        <td class="column blue">Pincode</td>
-                        <td class="column blue">:</td>
-                        <td class="column blue"></td>
+                        <td class="column blue" id="addressView"></td>
                     </tr>
                     <tr>
                         <td class="column blue">Email Id</td>
                         <td class="column blue">:</td>
-                        <td class="column blue"></td>
+                        <td class="column blue" id="emailView"></td>
                     </tr>
                     <tr>
                         <td class="column blue">Phone</td>
                         <td class="column blue">:</td>
-                        <td class="column blue"></td>
+                        <td class="column blue" id="phoneView"></td>
                     </tr>
                 </table>
                 <div class="dflex justfyCenter">

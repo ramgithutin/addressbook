@@ -4,12 +4,19 @@ function postvalue(name){
         type:'post',
         data:{
             method:"view",
-            Email:name,
+            name:name,
             dataType:"json"
         },
-        success:function(response){
-            var r=response;
-            $('#hello').html(r);
+        success:function(data){
+            let object=JSON.parse(data);
+            console.log(data) 
+            $('#nameview').html(object.FIRST_NAME+" "+object.LAST_NAME);
+            $('#genderView').html(object.GENDER);
+            $('#dobView').html(object.DOB);
+            $('#addressView').html(object.ADDRESS);
+            $('#emailView').html(object.EMAIL);
+            $('#phoneView').html(object.PHONE_NO);
+
         }
     }) 
 }

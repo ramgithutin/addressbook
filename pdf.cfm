@@ -32,5 +32,5 @@
         </body>
     </html>
 </cfdocument>
-<cfheader name="Content" value="attachment;filename=address.pdf">
+<cfheader name="Content-Disposition" value="attachment;filename=address.pdf">
 <cfcontent type="application/octet-stream" file="#expandPath('.')#\address.pdf" deletefile="Yes">
