@@ -24,8 +24,15 @@
 .justfyBetween{
     justify-content: space-between;
 }
+.hidden {
+    display:none;
+}
 .imageIcon{
     width: 20px;
+    padding: 0px 5px;
+}
+.imageIcon2{
+    width: 30px;
     padding: 0px 5px;
 }
 .header{
@@ -124,6 +131,10 @@
 a{
     text-decoration: none;
     color:#337ab7;
+}
+.noBorder{
+    border: none;
+    outline: none;
 }
 .padding10{
     padding: 10px;

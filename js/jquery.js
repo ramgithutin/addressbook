@@ -1,10 +1,10 @@
-function postvalue(name){
+function postvalue(personId){
     $.ajax({
         url:'components/getvalue.cfc?method=view',
         type:'post',
         data:{
             method:"view",
-            name:name,
+            personId:personId,
             dataType:"json"
         },
         success:function(data){
@@ -16,7 +16,6 @@ function postvalue(name){
             $('#addressView').html(object.ADDRESS);
             $('#emailView').html(object.EMAIL);
             $('#phoneView').html(object.PHONE_NO);
-
         }
     }) 
 }

@@ -6,7 +6,8 @@
         <script src="assets/jquery.js"></script>
     </head>
     <body>
-        <div class="dflex justfyCenter">
+             <cfif structKeyExists(session,'userFlag')>
+       <div class="dflex justfyCenter">
             <div class="whiteBackground padding10 width600">
                 <div class="lightblue dflex justfyCenter">
                     <div class="extraLarge blue padding10 ">CONTACT DETAILS</div>
@@ -46,7 +47,13 @@
                 <div class="dflex justfyCenter">
                     <span onclick="document.getElementById('id02').style.display='none'" class="dflex justfyCenter login">CLOSE</span>
                 </div>
+            </div>                        
+            <div class="dflex alignCenter justfyCenter width245 background">
+                <img src="assets/profile.png" alt="printer" class="bookImg">
             </div>
         </div>
+                        <cfelse>
+                <cflocation url = "login.cfm">
+            </cfif>
     </body>
 <html>

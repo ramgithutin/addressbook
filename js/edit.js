@@ -4,7 +4,6 @@ function vadidateedit(){
     var lName = document.getElementById('editLName');
     var gender = document.getElementById('editGender');
     var Dob = document.getElementById('editDate');
-    var fileUpload = document.getElementById('editFile');
     var address = document.getElementById('editAddress');
     var street = document.getElementById('editStreet');
     var email = document.getElementById('editemail');
@@ -16,12 +15,11 @@ function vadidateedit(){
 	var validatedlname = lnameValidate(lName);
 	var validatedgender = genderValidate(gender);
 	var validatedDob = DobValidate(Dob);
-	var validatedfileUpload = fileUploadValidate(fileUpload);
 	var validatedaddress = addressValidate(address);
 	var validatedstreet = streetValidate(street);
 	var validatedemail = emailValidate(email);
 	var validatedphone = phoneValidate(phone,len);
-	if(validatedoptionId && validatedfname && validatedlname && validatedgender && validatedDob && validatedfileUpload && validatedaddress && validatedstreet && validatedemail && validatedphone)
+	if(validatedoptionId && validatedfname && validatedlname && validatedgender && validatedDob && validatedaddress && validatedstreet && validatedemail && validatedphone)
 	return true;
 	else 
 	return false;
@@ -69,15 +67,6 @@ function DobValidate(Dob){
         return false;
     }else{
 		editDate.classList.remove("error");
-        return true;
-    }
-}
-function fileUploadValidate(fileUpload){
-    if(fileUpload.value==""){
-        editFile.classList.add("error");
-        return false;
-    }else{
-		editFile.classList.remove("error");
         return true;
     }
 }

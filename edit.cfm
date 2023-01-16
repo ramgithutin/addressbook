@@ -6,7 +6,8 @@
         <link rel="shortcut icon" href="assets/ABicon.png">
     </head>
     <body>
-        <cfoutput>
+        <cfoutput> 
+        <cfif structKeyExists(session,'userFlag')>
         <div class="dflex justfyCenter">
         <div class="whiteBackground padding10 width600">
             <div class="lightblue dflex justfyCenter">
@@ -16,6 +17,7 @@
             <form method="post" name="createFrom" onsubmit="return vadidateedit()">
                 <div class="dflex justfyBetween">
                     <div>
+                        <input type="hidden" id="personId">
                         <div class="blue padding10">Title</div>
                             <select name="editOptionId" id="editOptionId" class="borderNone">
                                 <option selected=""></option>
@@ -75,12 +77,19 @@
                     </div>
                 </div>
                 <div class="dflex justfyCenter">
-                    <input type="submit" name="editFormSubmit" id="editFormSubmit" class="login" value="EDIT">
+                    <input type="submit" name="editFormSubmit" id="editFormSubmit" class="login" value="EDIT" onclick="update()">
                 </div>
             </form>
         </div>
+        <div class="dflex alignCenter justfyCenter width245 background">
+                <img src="assets/profile.png" alt="printer" class="bookImg">
+            </div>
       </div>
     </div>
     </div>
+                <cfelse>
+                <cflocation url = "login.cfm">
+            </cfif>
 <script  src="js/edit.js"></script>
+<script  src="js/update.js"></script>
 </cfoutput>

@@ -8,7 +8,8 @@
         </head>
         <body>
             <cfoutput>
-                <table class="whiteBackground margin1010" >
+             <cfif structKeyExists(session,'userFlag')>
+               <table class="whiteBackground margin1010" >
                     <tr class="borderNone">
                         <th class="column blue"> </th>
                         <th class="column blue">NAME</th>
@@ -28,6 +29,10 @@
                         </tr>
                     </cfloop>
                 </table>
+
+                                <cfelse>
+                <cflocation url = "login.cfm">
+            </cfif>
             </cfoutput>
         </body>
     </html>

@@ -8,12 +8,14 @@
     </head>
     <body>
         <cfoutput>
+                    <cfif structKeyExists(session,'userFlag')>
+
             <cfinclude  template="mainHeade.cfm"> 
             <div class="middle padding10">
                 <div class="dflex whiteBackground justifyFlexEnd margin10">
                     <a href="pdf.cfm"><img src="assets/pdf.png" alt="pdf" class="imgIcon"></a>
                     <a href="excel.cfm"><img src="assets/excel.png" alt="excel" class="imgIcon"></a>
-                    <img src="assets/printer.png" alt="printer" class="imgIcon">
+                    <img src="assets/printer.png" alt="printer" class="imgIcon" onclick="PrintPage()">
                 </div>
                 <div class="dflex padding10 ">
                     <div class="padding10 whiteBackground height">
@@ -120,7 +122,11 @@
             </div> 
             <script  src="js/jquery.js"></script>
             <script  src="js/getValue.js"></script>
-            <script  src="js/registerValidate.js"></script>
+            <script  src="js/registerValidate.js"></script>            
+            <script  src="js/print.js"></script>
+                            <cfelse>
+                <cflocation url = "login.cfm">
+            </cfif>
         </cfoutput>
     </body>
 </html>

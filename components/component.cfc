@@ -64,12 +64,17 @@
         </cfif>
         <cflocation url="mainpage.cfm">
     </cffunction> 
-
     <cffunction  name="viewTabel" returnType="query">
         <cfquery name="display">
             SELECT ID,First_Name,Last_Name,email,phone_no,Gender
             FROM register;
         </cfquery>
         <cfreturn display>
+    </cffunction>
+    <cffunction name="logout" access="public">
+        <cfif structKeyExists(form,'logout')>
+        <cfset StructClear(session)>
+        <cflocation url="login.cfm">
+        </cfif>
     </cffunction>
 </cfcomponent>

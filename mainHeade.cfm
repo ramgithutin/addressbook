@@ -5,17 +5,22 @@
         <link rel="shortcut icon" href="assets/ABicon.png">
     </head>
     <body>
+        <cfif structKeyExists(session,'userFlag')>
         <div class="header background dflex justfyBetween">
             <div class="headerLeft dflex alignCenter">
-               <img src="assets/book.png" alt="book" class="imageIcon">
+               <img src="assets/book.png" alt="book" class="imageIcon2">
                <div class="medium white">ADDRESS BOOK</div>
             </div>
             <div class="headerLeft dflex alignCenter">
-                <a href="login.cfm" class="dflex alignCenter margin10">
-                    <img src="assets/logout.png" alt="book" class="imageIcon">
-                    <div class="medium white">Login</div>
-                </a>
+                    <img src="assets/logout.png" alt="book" class="imageIcon2">
+                    <form name="logout" method="post">
+                        <input type="submit" value="Logout" class="medium white background noBorder" name="logout">
+                    </form>
+                    <cfinvoke method="logout" component="components/component">
             </div>
         </div>
+                        <cfelse>
+                <cflocation url = "login.cfm">
+            </cfif>
     </body>
 </html>
